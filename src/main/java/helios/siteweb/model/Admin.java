@@ -5,6 +5,7 @@ public class Admin {
 	private String nomAdmin;
 	private String loginAdmin;
 	private String mdpAdmin;
+	private String coucou;
 	
 	public Admin(String nomAdmin, String loginAdmin, String mdpAdmin){
 		this.nomAdmin = nomAdmin;
