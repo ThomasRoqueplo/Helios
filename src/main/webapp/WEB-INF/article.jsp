@@ -45,11 +45,11 @@
 		<!-- Page Heading/Breadcrumbs -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">${article.titreArticle}</h1>
+				<h1 class="page-header">${article.titre_Article}</h1>
 				<ol class="breadcrumb">
 					<li><a href="index">Accueil</a></li>
 					<li><a href="blog">Blog</a></li>
-					<li class="active">${article.titreArticle}</li>
+					<li class="active">${article.titre_Article}</li>
 				</ol>
 			</div>
 		</div>
@@ -67,20 +67,20 @@
 
 				<!-- Date/Time -->
 				<p>
-					<i class="fa fa-clock-o"></i> Publié le ${article.dateArticle}
+					<i class="fa fa-clock-o"></i> Publié le ${article.date_Article}
 				</p>
 
 				<hr>
 
 				<!-- Preview Image -->
-				<img class="img-responsive" src="img/${article.photoPresentation}"
+				<img class="img-responsive" src="img/${article.photoPresentation_Article}"
 					alt="">
 
 				<hr>
 
 				<!-- Post Content -->
-				<p class="lead">${article.textePresentation}</p>
-				<p>${article.texteArticle}</p>
+				<p class="lead">${article.textePresentation_Article}</p>
+				<p>${article.texte_Article}</p>
 
 				<hr>
 			</div>

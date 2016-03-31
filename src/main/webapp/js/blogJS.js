@@ -7,8 +7,8 @@ requeteGetArticle.responseType = "json";
 requeteGetArticle.onload = function(){
 var a = this.response.length;
 for(var i=int; i<int+5; i++){
-var lienPage =  "article?id="+this.response[i].id;
-var lienImg = "img/"+this.response[i].photoPresentation;
+var lienPage =  "article?id="+this.response[i].id_Article;
+var lienImg = "img/"+this.response[i].photoPresentation_Article;
 
 var h2Article = document.createElement('h2');
 var ah2Article = document.createElement('a');
@@ -35,7 +35,7 @@ var hr3Article = document.createElement('hr');
 
 h2Article.setAttribute("class", "blog1");
 ah2Article.setAttribute("href", lienPage);
-ah2Article.textContent = this.response[i].titreArticle;
+ah2Article.textContent = this.response[i].titre_Article;
 h2Article.appendChild(ah2Article);
 
 p1Article.setAttribute("class", "lead blog1");
@@ -47,7 +47,7 @@ p1Article.appendChild(ap1Article);
 ip2Article.setAttribute("class", "fa fa-clock-o");
 p2Article.setAttribute("class", "blog1");
 p2Article.appendChild(ip2Article);
-p2Article.textContent = "Posté le "+this.response[i].dateArticle;
+p2Article.textContent = "Posté le "+this.response[i].date_Article;
 
 hr1Article.setAttribute("class", "blog1");
 
@@ -61,7 +61,7 @@ a1Article.appendChild(imga1Article);
 hr2Article.setAttribute("class", "blog1");
 
 p3Article.setAttribute("class", "blog1");
-p3Article.textContent = this.response[i].textePresentation;
+p3Article.textContent = this.response[i].textePresentation_Article;
 
 a2Article.setAttribute("class", "btn btn-primary blog1");
 a2Article.setAttribute("href", lienPage);
@@ -106,12 +106,12 @@ var requeteGetArticle = new XMLHttpRequest();
 requeteGetArticle.open("GET", "ws/article/"+id);
 requeteGetArticle.responseType = "json";
 requeteGetArticle.onload = function(){
-var titre = this.response[i].titreArticle;
-var lienImg = "img/"+this.response[i].photoPresentation;
-var textePresentation = this.response[i].textePresentation;
-var texteArticle = this.response[i].texteArticle;
-var photoArticle = this.response[i].photoArticle;
-var date = this.response[i].dateArticle;
+var titre = this.response[i].titre_Article;
+var lienImg = "img/"+this.response[i].photoPresentation_Article;
+var textePresentation = this.response[i].textePresentation_Article;
+var texteArticle = this.response[i].texte_Article;
+var photoArticle = this.response[i].photo_Article;
+var date = this.response[i].date_Article;
 
 var divRow = document.createElement('div');
 divRow.setAttribute("class", "row");
@@ -166,12 +166,12 @@ var getCategorie = function(){
 				ulCategorie.setAttribute("class", "list-unstyled");
 				
 				for(var i=d; i<4; i++){
-					var lienPage = "article/"+this.response[i].categorieArticle;
+					var lienPage = "article/"+this.response[i].categorie_Article;
 					
 					var liCategorie = document.createElement('li');
 					var aCategorie = document.createElement('a');
 					aCategorie.setAttribute("href", lienPage);
-					aCategorie.textContent = this.response[i].categorieArticle;
+					aCategorie.textContent = this.response[i].categorie_Article;
 					
 					liCategorie.appendChild(aCategorie);
 					ulCategorie.appendChild(liCategorie);
@@ -194,12 +194,12 @@ var getCategorie = function(){
 			ulCategorie.setAttribute("class", "list-unstyled");
 			
 			for(var i=d; i<b+d; i++){
-				var lienPage = "article/"+this.response[i].categorieArticle;
+				var lienPage = "article/"+this.response[i].categorie_Article;
 				
 				var liCategorie = document.createElement('li');
 				var aCategorie = document.createElement('a');
 				aCategorie.setAttribute("href", lienPage);
-				aCategorie.textContent = this.response[i].categorieArticle;
+				aCategorie.textContent = this.response[i].categorie_Article;
 				
 				liCategorie.appendChild(aCategorie);
 				ulCategorie.appendChild(liCategorie);

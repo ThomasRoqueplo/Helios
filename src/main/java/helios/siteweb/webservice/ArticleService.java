@@ -42,8 +42,8 @@ public class ArticleService {
 	
 	@Path("/articleCategorie")
 	@GET
-	public Response recupArticleCategorie(String categorie){
-		this.liste = HeliosManager.getInstance().getArticleCategorie(categorie);
+	public Response recupArticleCategorie(String categorie_Article){
+		this.liste = HeliosManager.getInstance().getArticleCategorie(categorie_Article);
 		String listeString = gson.toJson(this.liste);
 		return Response.status(200).entity(listeString).build();
 	}

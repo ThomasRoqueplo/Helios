@@ -2,61 +2,95 @@ package helios.siteweb.model;
 
 public class Partenaire {
 	
-	String nomPartenaire;
-	String descriptionPartenaire;
-	String photoPartenaire;
-	String lienPartenaire;
-	String languePartenaire;
-	int importancePartenaire;
+	private Integer id_Partenaire;
+	private String nom_Partenaire;
+	private String description_Partenaire;
+	private String photo_Partenaire;
+	private String lien_Partenaire;
+	private Integer importance_Partenaire;
+	private String langue_Partenaire;
 	
-	public Partenaire(String nomPartenaire, String descriptionPartenaire,
-			String photoPartenaire, String lienPartenaire, String languePartenaire, 
-			int importancePartenaire){
-		this.nomPartenaire = nomPartenaire;
-		this.descriptionPartenaire = descriptionPartenaire;
-		this.lienPartenaire= lienPartenaire;
-		this.languePartenaire = languePartenaire;
-		this.importancePartenaire = importancePartenaire;
+	public Partenaire(
+			Integer id_Partenaire,
+			String nom_Partenaire, 
+			String description_Partenaire,
+			String photo_Partenaire, 
+			String lien_Partenaire,
+			Integer importance_Partenaire,
+			String langue_Partenaire){
+		this.id_Partenaire = id_Partenaire;
+		this.nom_Partenaire = nom_Partenaire;
+		this.description_Partenaire = description_Partenaire;
+		this.photo_Partenaire = photo_Partenaire;
+		this.lien_Partenaire= lien_Partenaire;
+		this.importance_Partenaire = importance_Partenaire;
+		this.langue_Partenaire = langue_Partenaire;
 	}
 	
-	public Partenaire(String nomPartenaire, String descriptionPartenaire,
-			String photoPartenaire, String lienPartenaire){
-		this.nomPartenaire = nomPartenaire;
-		this.descriptionPartenaire = descriptionPartenaire;
-		this.photoPartenaire = photoPartenaire;
-		this.lienPartenaire = lienPartenaire;
+	public Partenaire(String nom_Partenaire, 
+			String description_Partenaire,
+			String photo_Partenaire, 
+			String lien_Partenaire){
+		this.nom_Partenaire = nom_Partenaire;
+		this.description_Partenaire = description_Partenaire;
+		this.photo_Partenaire = photo_Partenaire;
+		this.lien_Partenaire = lien_Partenaire;
 	}
 
-	public String getNomPartenaire() {
-		return nomPartenaire;
+	public Integer getId_Partenaire() {
+		return id_Partenaire;
 	}
 
-	public void setNomPartenaire(String nomPartenaire) {
-		this.nomPartenaire = nomPartenaire;
+	public void setId_Partenaire(Integer id_Partenaire) {
+		this.id_Partenaire = id_Partenaire;
 	}
 
-	public String getDescriptionPartenaire() {
-		return descriptionPartenaire;
+	public String getNom_Partenaire() {
+		return nom_Partenaire;
 	}
 
-	public void setDescriptionPartenaire(String descriptionPartenaire) {
-		this.descriptionPartenaire = descriptionPartenaire;
+	public void setNom_Partenaire(String nom_Partenaire) {
+		this.nom_Partenaire = nom_Partenaire;
 	}
 
-	public String getLanguePartenaire() {
-		return languePartenaire;
+	public String getDescription_Partenaire() {
+		return description_Partenaire;
 	}
 
-	public void setLanguePartenaire(String languePartenaire) {
-		this.languePartenaire = languePartenaire;
+	public void setDescription_Partenaire(String description_Partenaire) {
+		this.description_Partenaire = description_Partenaire;
 	}
 
-	public int getImportancePartenaire() {
-		return importancePartenaire;
+	public String getPhoto_Partenaire() {
+		return photo_Partenaire;
 	}
 
-	public void setImportancePartenaire(int importancePartenaire) {
-		this.importancePartenaire = importancePartenaire;
+	public void setPhoto_Partenaire(String photo_Partenaire) {
+		this.photo_Partenaire = photo_Partenaire;
+	}
+
+	public String getLien_Partenaire() {
+		return lien_Partenaire;
+	}
+
+	public void setLien_Partenaire(String lien_Partenaire) {
+		this.lien_Partenaire = lien_Partenaire;
+	}
+
+	public Integer getImportance_Partenaire() {
+		return importance_Partenaire;
+	}
+
+	public void setImportance_Partenaire(Integer importance_Partenaire) {
+		this.importance_Partenaire = importance_Partenaire;
+	}
+
+	public String getLangue_Partenaire() {
+		return langue_Partenaire;
+	}
+
+	public void setLangue_Partenaire(String langue_Partenaire) {
+		this.langue_Partenaire = langue_Partenaire;
 	}
 	
 }

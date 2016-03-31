@@ -91,7 +91,6 @@
                 <!-- Blog Categories Well -->
                 <div class="well">
                     <h4>Catégories</h4>
-                    <h4>Catégories</h4>
                     <div class="row" id="rowCategorie">
                         <!-- /.col-lg-6 -->
                     </div>

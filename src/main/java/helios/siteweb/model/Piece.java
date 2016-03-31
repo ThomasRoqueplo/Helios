@@ -2,39 +2,62 @@ package helios.siteweb.model;
 
 public class Piece {
 	
-	String nomPiece;
-	String descriptionPiece;
-	String languePiece;
+	private Integer id_Piece;
+	private String nom_Piece;
+	private String voiture_Piece;
+	private String description_Piece;
+	private String langue_Piece;
 	
-	public Piece(String nomPiece, String descriptionPiece,
-			String languePiece){
-		this.nomPiece = nomPiece;
-		this.descriptionPiece = descriptionPiece;
-		this.languePiece = languePiece;
+	public Piece(Integer id_Piece,
+			String nom_Piece, 
+			String voiture_Piece,
+			String description_Piece,
+			String langue_Piece){
+		this.id_Piece = id_Piece;
+		this.nom_Piece = nom_Piece;
+		this.voiture_Piece = voiture_Piece;
+		this.description_Piece = description_Piece;
+		this.langue_Piece = langue_Piece;
 	}
 
-	public String getNomPiece() {
-		return nomPiece;
+	public Integer getId_Piece() {
+		return id_Piece;
 	}
 
-	public void setNomPiece(String nomPiece) {
-		this.nomPiece = nomPiece;
+	public void setId_Piece(Integer id_Piece) {
+		this.id_Piece = id_Piece;
 	}
 
-	public String getDescriptionPiece() {
-		return descriptionPiece;
+	public String getNom_Piece() {
+		return nom_Piece;
 	}
 
-	public void setDescriptionPiece(String descriptionPiece) {
-		this.descriptionPiece = descriptionPiece;
+	public void setNom_Piece(String nom_Piece) {
+		this.nom_Piece = nom_Piece;
 	}
 
-	public String getLanguePiece() {
-		return languePiece;
+	public String getVoiture_Piece() {
+		return voiture_Piece;
 	}
 
-	public void setLanguePiece(String languePiece) {
-		this.languePiece = languePiece;
+	public void setVoiture_Piece(String voiture_Piece) {
+		this.voiture_Piece = voiture_Piece;
+	}
+
+	public String getDescription_Piece() {
+		return description_Piece;
+	}
+
+	public void setDescription_Piece(String description_Piece) {
+		this.description_Piece = description_Piece;
+	}
+
+	public String getLangue_Piece() {
+		return langue_Piece;
+	}
+
+	public void setLangue_Piece(String langue_Piece) {
+		this.langue_Piece = langue_Piece;
 	}
 	
 }
