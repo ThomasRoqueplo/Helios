@@ -7,7 +7,8 @@ public class Admin {
 	private String login_Admin;
 	private String mdp_Admin;
 	
-	public Admin(Integer id_Amdin, 
+	public Admin(
+			Integer id_Amdin, 
 			String nom_Admin, 
 			String login_Admin, 
 			String mdp_Admin){
