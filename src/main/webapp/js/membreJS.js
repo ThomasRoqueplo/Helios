@@ -5,7 +5,7 @@ var getMembre = function(){
 	requeteGetMembre.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<a; i++){
-			//var lienPage = "/helios/"+this.response[i].titreArticle;
+			//var lienPage = "/helios/"+this.response[i].titre_Article;
 			var lienImg = "img/"+this.response[i].photo_Membre;
 			
 			var div1Membre = document.createElement('div');
