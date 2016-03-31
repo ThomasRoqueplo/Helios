@@ -16,7 +16,7 @@ import helios.siteweb.model.Article;
 import helios.siteweb.model.Evenement;
 import helios.siteweb.model.Membre;
 import helios.siteweb.model.Partenaire;
-import helios.siteweb.model.Photo;
+import helios.siteweb.model.Galerie;
 
 public class HeliosManager {
 	
@@ -64,13 +64,13 @@ public class HeliosManager {
 		return listePartenaire;
 	}
 	
-	public List<Photo> getPhoto(){
-		List<Photo> listePhoto = galerieDao.getPhoto();
+	public List<Galerie> getPhoto(){
+		List<Galerie> listePhoto = galerieDao.getPhoto();
 		return listePhoto;
 	}
 	
-	public List<Photo> getVideo(){
-		List<Photo> listePhoto = galerieDao.getVideo();
+	public List<Galerie> getVideo(){
+		List<Galerie> listePhoto = galerieDao.getVideo();
 		return listePhoto;
 	}
 	

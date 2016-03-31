@@ -5,8 +5,8 @@ var getMembre = function(){
 	requeteGetMembre.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<a; i++){
-			var lienPage = "/helios/"+this.response[i].titreArticle;
-			var lienImg = "img/"+this.response[i].photoMembre;
+			//var lienPage = "/helios/"+this.response[i].titreArticle;
+			var lienImg = "img/"+this.response[i].photo_Membre;
 			
 			var div1Membre = document.createElement('div');
 			
@@ -49,42 +49,42 @@ var getMembre = function(){
 			img2Membre.setAttribute("alt", "");
 			
 			div3Membre.setAttribute("class", "caption");
-			h3Membre.textContent = this.response[i].prenomMembre + " " + this.response[i].nomMembre;
+			h3Membre.textContent = this.response[i].prenom_Membre + " " + this.response[i].nom_Membre;
 			
-			smallMembre.textContent = this.response[i].jobMembre;
-			pMembre.textContent = this.response[i].descpritonMembre;
+			smallMembre.textContent = this.response[i].job_Membre;
+			pMembre.textContent = this.response[i].descpriton_Membre;
 			
 			ulMembre.setAttribute("class", "list-inline");
 			
 			a1Membre.setAttribute("style", "color : #3b5998;")
-			a1Membre.setAttribute("href", this.response[i].facebookMembre);
+			a1Membre.setAttribute("href", this.response[i].facebook_Membre);
 			i1Membre.setAttribute("class", "fa fa-2x fa-facebook-square");
 			
 			a1Membre.appendChild(i1Membre);
 			li1Membre.appendChild(a1Membre);
 			
 			a2Membre.setAttribute("style", "color : #0976b4;")
-			a2Membre.setAttribute("href", this.response[i].linkMembre);
+			a2Membre.setAttribute("href", this.response[i].link_Membre);
 			i2Membre.setAttribute("class", "fa fa-2x fa-linkedin-square");
 			
 			a2Membre.appendChild(i2Membre);
 			li2Membre.appendChild(a2Membre);
 			
 			a3Membre.setAttribute("style", "color : #55acee;")
-			a3Membre.setAttribute("href", this.response[i].twitterMembre);
+			a3Membre.setAttribute("href", this.response[i].twitter_Membre);
 			i3Membre.setAttribute("class", "fa fa-2x fa-twitter-square");
 			
 			a3Membre.appendChild(i3Membre);
 			li3Membre.appendChild(a3Membre);
 			
 			a4Membre.setAttribute("style", "color : #3f729b;")
-			a4Membre.setAttribute("href", this.response[i].instaMembre);
+			a4Membre.setAttribute("href", this.response[i].insta_Membre);
 			i4Membre.setAttribute("class", "fa fa-2x fa-instagram");
 			
 			a4Membre.appendChild(i4Membre);
 			li4Membre.appendChild(a4Membre);
 			
-			a5Membre.setAttribute("href", this.response[i].mailMembre);
+			a5Membre.setAttribute("href", this.response[i].mail_Membre);
 			i5Membre.setAttribute("class", "fa fa-2x fa-envelope");
 			
 			a5Membre.appendChild(i5Membre);
