@@ -49,6 +49,14 @@ public class Membre {
 		this.mailMembre = mailMembre;
 	}
 
+	public String getPhotoMembre() {
+		return photoMembre;
+	}
+
+	public void setPhotoMembre(String photoMembre) {
+		this.photoMembre = photoMembre;
+	}
+
 	public String getNomMembre() {
 		return nomMembre;
 	}
