@@ -8,22 +8,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import helios.siteweb.dao.GalerieDao;
-import helios.siteweb.model.Photo;
+import helios.siteweb.model.Galerie;
 
 public class GalerieDaoImpl implements GalerieDao {
 	
-	public List<Photo> getPhoto(){
-		List<Photo> listePhoto = new ArrayList<Photo>();
+	public List<Galerie> getPhoto(){
+		List<Galerie> listePhoto = new ArrayList<Galerie>();
 		
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM photo WHERE categorie = ? ORDER BY datePhoto DESC");
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM galerie WHERE type_Galerie = ? ORDER BY date_Galerie DESC");
 			stmt.setString(1, "photo");
 			
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				listePhoto.add(new Photo(rs.getString("articlePhoto"),rs.getString("titrePhoto"),
-						rs.getString("commentairePhoto"), rs.getString("lienPhoto")));
+				listePhoto.add(new Galerie(rs.getInt("id_Galerie"),
+						rs.getString("article_Galerie"),rs.getString("titre_Galerie"),
+						rs.getString("description_Galerie"), rs.getString("lien_Galerie")));
 			}
 			
 			rs.close();
@@ -36,18 +37,19 @@ public class GalerieDaoImpl implements GalerieDao {
 		return listePhoto;
 	}
 	
-	public List<Photo> getVideo(){
-		List<Photo> listePhoto = new ArrayList<Photo>();
+	public List<Galerie> getVideo(){
+		List<Galerie> listePhoto = new ArrayList<Galerie>();
 		
 		try {
 			Connection connection = DataSourceProvider.getDataSource().getConnection();
-			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM photo WHERE categorie = ? ORDER BY datePhoto DESC");
+			PreparedStatement stmt = connection.prepareStatement("SELECT * FROM galerie WHERE type_Galerie = ? ORDER BY date_Galerie DESC");
 			stmt.setString(1, "video");
 			
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				listePhoto.add(new Photo(rs.getString("articlePhoto"), rs.getString("titrePhoto"),
-						rs.getString("commentairePhoto"), rs.getString("lienPhoto")));
+				listePhoto.add(new Galerie(rs.getInt("id_Galerie"),
+						rs.getString("article_Galerie"),rs.getString("titre_Galerie"),
+						rs.getString("description_Galerie"), rs.getString("lien_Galerie")));
 			}
 			
 			rs.close();

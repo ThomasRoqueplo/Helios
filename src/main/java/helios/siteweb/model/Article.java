@@ -2,134 +2,148 @@ package helios.siteweb.model;
 
 public class Article {
 	
-	private Integer id;
-	private String titreArticle;
-	private String photoPresentation;
-	private String textePresentation;
-	private String texteArticle;
-	private String photoArticle;
-	private String dateArticle;
-	private String categorieArticle;
-	private String langueArticle;
+	private Integer id_Article;
+	private String titre_Article;
+	private String photoPresentation_Article;
+	private String textePresentation_Article;
+	private String photo_Article;
+	private String texte_Article;
+	private String date_Article;
+	private String categorie_Article;
+	private String langue_Article;
 	
-	public Article(Integer id, String titreArticle, String photoPresentation,
-			String textePresentation, String texteArticle,
-			String photoArticle, String dateArticle, 
-			String categorieArticle, String langueArticle){
-		this.id = id;
-		this.titreArticle = titreArticle;
-		this.photoPresentation = photoPresentation;
-		this.textePresentation = textePresentation;
-		this.texteArticle = texteArticle;
-		this.photoArticle = photoArticle;
-		this.dateArticle = dateArticle;
-		this.categorieArticle = categorieArticle;
-		this.langueArticle = langueArticle;
-	}
-	
-	public Article(Integer id, String titreArticle, String photoPresentation,
-			String textePresentation, String texteArticle,
-			String photoArticle, String dateArticle, 
-			String langueArticle){
-		this.id = id;
-		this.titreArticle = titreArticle;
-		this.photoPresentation = photoPresentation;
-		this.textePresentation = textePresentation;
-		this.texteArticle = texteArticle;
-		this.photoArticle = photoArticle;
-		this.dateArticle = dateArticle;
-		this.langueArticle = langueArticle;
+	public Article(Integer id_Article, 
+			String titre_Article, 
+			String photoPresentation_Article,
+			String textePresentation_Article, 
+			String photo_Article,
+			String texte_Article,
+			String date_Article, 
+			String categorie_Article, 
+			String langue_Article){
+		this.id_Article = id_Article;
+		this.titre_Article = titre_Article;
+		this.photoPresentation_Article = photoPresentation_Article;
+	this.textePresentation_Article = textePresentation_Article;
+		this.texte_Article = texte_Article;
+		this.photo_Article = photo_Article;
+		this.date_Article = date_Article;
+		this.categorie_Article = categorie_Article;
+		this.langue_Article = langue_Article;
 	}
 	
-	public Article(Integer id, String titreArticle, String photoPresentation){
-		this.id = id;
-		this.titreArticle = titreArticle;
-		this.photoPresentation = photoPresentation;
+	public Article(Integer id_Article, 
+			String titre_Article, 
+			String photoPresentation_Article,
+			String textePresentation_Article, 
+			String photo_Article, 
+			String texte_Article,
+			String date_Article, 
+			String langue_Article){
+		this.id_Article = id_Article;
+		this.titre_Article = titre_Article;
+		this.photoPresentation_Article = photoPresentation_Article;
+		this.textePresentation_Article = textePresentation_Article;
+		this.texte_Article = texte_Article;
+		this.photo_Article = photo_Article;
+		this.date_Article = date_Article;
+		this.langue_Article = langue_Article;
 	}
 	
-	public Article(Integer id, String titreArticle, String photoPresentation,
-			String textePresentation, String dateArticle){
-		this.id = id;
-		this.titreArticle = titreArticle;
-		this.photoPresentation = photoPresentation;
-		this.textePresentation = textePresentation;
-		this.dateArticle = dateArticle;
+	public Article(Integer id_Article, 
+			String titre_Article, 
+			String photoPresentation_Article){
+		this.id_Article = id_Article;
+		this.titre_Article = titre_Article;
+		this.photoPresentation_Article = photoPresentation_Article;
 	}
 	
-	public Article(String categorieArticle){
-		this.categorieArticle = categorieArticle;
+	public Article(Integer id_Article, 
+			String titre_Article, 
+			String photoPresentation_Article,
+			String textePresentation_Article, 
+			String date_Article){
+		this.id_Article = id_Article;
+		this.titre_Article = titre_Article;
+		this.photoPresentation_Article = photoPresentation_Article;
+		this.textePresentation_Article = textePresentation_Article;
+		this.date_Article = date_Article;
+	}
+	
+	public Article(String categorie_Article){
+		this.categorie_Article = categorie_Article;
 	}
 
-	public String getTitreArticle() {
-		return titreArticle;
+	public Integer getId_Article() {
+		return id_Article;
 	}
 
-	public void setTitreArticle(String titreArticle) {
-		this.titreArticle = titreArticle;
+	public void setId_Article(Integer id_Article) {
+		this.id_Article = id_Article;
 	}
 
-	public String getPhotoPresentation() {
-		return photoPresentation;
+	public String getTitre_Article() {
+		return titre_Article;
 	}
 
-	public void setPhotoPresentation(String photoPresentation) {
-		this.photoPresentation = photoPresentation;
+	public void setTitre_Article(String titre_Article) {
+		this.titre_Article = titre_Article;
 	}
 
-	public String getTextePresentation() {
-		return textePresentation;
+	public String getPhotoPresentation_Article() {
+		return photoPresentation_Article;
 	}
 
-	public void setTextePresentation(String textePresentation) {
-		this.textePresentation = textePresentation;
+	public void setPhotoPresentation_Article(String photoPresentation_Article) {
+		this.photoPresentation_Article = photoPresentation_Article;
 	}
 
-	public String getTexteArticle() {
-		return texteArticle;
+	public String getTextePresentation_Article() {
+		return textePresentation_Article;
 	}
 
-	public void setTexteArticle(String texteArticle) {
-		this.texteArticle = texteArticle;
+	public void setTextePresentation_Article(String textePresentation_Article) {
+		this.textePresentation_Article = textePresentation_Article;
 	}
 
-	public String getPhotoArticle() {
-		return photoArticle;
+	public String getPhoto_Article() {
+		return photo_Article;
 	}
 
-	public void setPhotoArticle(String photoArticle) {
-		this.photoArticle = photoArticle;
+	public void setPhoto_Article(String photo_Article) {
+		this.photo_Article = photo_Article;
 	}
 
-	public String getDateArticle() {
-		return dateArticle;
+	public String getTexte_Article() {
+		return texte_Article;
 	}
 
-	public void setDateArticle(String dateArticle) {
-		this.dateArticle = dateArticle;
+	public void setTexte_Article(String texte_Article) {
+		this.texte_Article = texte_Article;
 	}
 
-	public String getLangueArticle() {
-		return langueArticle;
+	public String getDate_Article() {
+		return date_Article;
 	}
 
-	public void setLangueArticle(String langueArticle) {
-		this.langueArticle = langueArticle;
+	public void setDate_Article(String date_Article) {
+		this.date_Article = date_Article;
 	}
 
-	public String getCategorieArticle() {
-		return categorieArticle;
+	public String getCategorie_Article() {
+		return categorie_Article;
 	}
 
-	public void setCategorieArticle(String categorieArticle) {
-		this.categorieArticle = categorieArticle;
+	public void setCategorie_Article(String categorie_Article) {
+		this.categorie_Article = categorie_Article;
 	}
 
-	public int getId() {
-		return id;
+	public String getLangue_Article() {
+		return langue_Article;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setLangue_Article(String langue_Article) {
+		this.langue_Article = langue_Article;
 	}
 	
 }

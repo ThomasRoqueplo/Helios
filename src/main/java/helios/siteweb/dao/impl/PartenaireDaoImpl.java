@@ -21,9 +21,9 @@ public class PartenaireDaoImpl implements PartenaireDao{
 			
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				listePartenaire.add(new Partenaire(rs.getString("nomPartenaire"), 
-						rs.getString("descriptionPartenaire"), rs.getString("photoPartenaire"),
-						rs.getString("lienPartenaire")));
+				listePartenaire.add(new Partenaire(rs.getString("nom_Partenaire"), 
+						rs.getString("description_Partenaire"), rs.getString("photo_Partenaire"),
+						rs.getString("lien_Partenaire")));
 			}
 			
 			rs.close();

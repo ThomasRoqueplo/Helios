@@ -2,12 +2,12 @@ package helios.siteweb.dao;
 
 import java.util.List;
 
-import helios.siteweb.model.Photo;
+import helios.siteweb.model.Galerie;
 
 public interface GalerieDao {
 	
-	public List<Photo> getPhoto();
+	public List<Galerie> getPhoto();
 	
-	public List<Photo> getVideo(); 
+	public List<Galerie> getVideo(); 
 
 }

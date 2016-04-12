@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import helios.siteweb.metier.HeliosManager;
 import helios.siteweb.model.Membre;
 
-@WebServlet("/administration")
+@WebServlet(urlPatterns = "/admin/administration")
 
 public class AdministrationServlet extends HttpServlet {
 
@@ -26,7 +26,7 @@ public class AdministrationServlet extends HttpServlet {
 		List<Membre> membres = HeliosManager.getInstance().getMembre();
 		request.setAttribute("listeMembres", membres);
 
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/Admin/administration.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/Admin/administration.jsp");
 		view.forward(request, response);
 	}
 

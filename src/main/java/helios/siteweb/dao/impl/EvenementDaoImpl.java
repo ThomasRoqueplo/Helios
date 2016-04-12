@@ -21,9 +21,10 @@ public class EvenementDaoImpl implements EvenementDao {
 			
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				listeEvenement.add(new Evenement(rs.getString("articleEvenement"), rs.getString("nomEvenement"),
-						rs.getString("descritpionEvenement"), rs.getString("dateEvenement"),
-						rs.getString("photoEvenement")));
+				listeEvenement.add(new Evenement(rs.getInt("id_Evenement"), 
+						rs.getString("article_Evenement"), rs.getString("nom_Evenement"),
+						rs.getString("description_Evenement"), rs.getString("date_Evenement"),
+						rs.getString("photo_Evenement"), rs.getString("langue_Evenement")));
 			}
 			
 			rs.close();
