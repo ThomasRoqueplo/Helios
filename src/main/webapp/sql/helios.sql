@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.1.4
 -- http://www.phpmyadmin.net
 --
--- Client: 127.0.0.1
--- Généré le : Lun 07 Mars 2016 à 15:22
--- Version du serveur: 5.5.16
--- Version de PHP: 5.3.8
+-- Client :  127.0.0.1
+-- Généré le :  Lun 11 Avril 2016 à 22:17
+-- Version du serveur :  5.6.15-log
+-- Version de PHP :  5.4.24
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `helios`
+-- Base de données :  `helios_helios`
 --
 
 -- --------------------------------------------------------
@@ -27,13 +27,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `admin` (
-  `idAdmin` int(11) NOT NULL AUTO_INCREMENT,
-  `nomAdmin` varchar(150) NOT NULL,
-  `loginAdmin` varchar(150) NOT NULL,
-  `mdpAdmin` varchar(150) NOT NULL,
-  PRIMARY KEY (`nomAdmin`),
-  KEY `idAdmin` (`idAdmin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `id_Admin` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Admin` varchar(150) NOT NULL,
+  `login_Admin` varchar(150) NOT NULL,
+  `mdp_Admin` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Admin`),
+  KEY `id_Admin` (`id_Admin`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `admin`
+--
+
+INSERT INTO `admin` (`id_Admin`, `nom_Admin`, `login_Admin`, `mdp_Admin`) VALUES
+(1, 'Admin', 'Helios', '70fad24005bf00fa21059bfb930dc9e8ed121551b7a522d7:b66436e033ef8cc734694c7b0c5b2ae9efc7dc8c9cb0b51b');
 
 -- --------------------------------------------------------
 
@@ -42,25 +49,50 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 CREATE TABLE IF NOT EXISTS `article` (
-  `idArticle` int(11) NOT NULL AUTO_INCREMENT,
-  `titreArticle` varchar(150) NOT NULL,
-  `photoPresentation` varchar(100) NOT NULL,
-  `textePresentation` text NOT NULL,
-  `texteArticle` text NOT NULL,
-  `photoArticle` text NOT NULL,
-  `dateArticle` date NOT NULL,
-  `langueArticle` varchar(100) NOT NULL,
-  PRIMARY KEY (`titreArticle`),
-  KEY `idArticle` (`idArticle`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `id_Article` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_Article` varchar(150) NOT NULL,
+  `photoPresentation_Article` varchar(150) NOT NULL,
+  `textePresentation_Article` text NOT NULL,
+  `photo_Article` varchar(150) NOT NULL,
+  `texte_Article` text NOT NULL,
+  `date_Article` date NOT NULL,
+  `categorie_Article` varchar(150) NOT NULL,
+  `langue_Article` varchar(150) NOT NULL,
+  PRIMARY KEY (`titre_Article`),
+  KEY `id_Article` (`id_Article`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `article`
 --
 
-INSERT INTO `article` (`idArticle`, `titreArticle`, `photoPresentation`, `textePresentation`, `texteArticle`, `photoArticle`, `dateArticle`, `langueArticle`) VALUES
-(1, 'Cervices libertatis velut cervices fundamenta', 'article1.jpg', 'Circa hos dies Lollianus primae lanuginis adulescens, Lampadi filius ex praefecto, exploratius causam Maximino spectante, convictus codicem noxiarum artium nondum per aetatem firmato consilio descripsisse, exulque mittendus, ut sperabatur, patris inpulsu provocavit ad principem, et iussus ad eius comitatum duci, de fumo, ut aiunt, in flammam traditus Phalangio Baeticae consulari cecidit funesti carnificis manu.', 'Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.\r\n\r\nDum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella rediviva consurgunt, anno sexto decimo et eo diutius post Nepotiani exitium, saeviens per urbem aeternam urebat cuncta Bellona, ex primordiis minimis ad clades excita luctuosas, quas obliterasset utinam iuge silentium! ne forte paria quandoque temptentur, plus exemplis generalibus nocitura quam delictis.\r\n\r\nErat autem diritatis eius hoc quoque indicium nec obscurum nec latens, quod ludicris cruentis delectabatur et in circo sex vel septem aliquotiens vetitis certaminibus pugilum vicissim se concidentium perfusorumque sanguine specie ut lucratus ingentia laetabatur.\r\n\r\nMox dicta finierat, multitudo omnis ad, quae imperator voluit, promptior laudato consilio consensit in pacem ea ratione maxime percita, quod norat expeditionibus crebris fortunam eius in malis tantum civilibus vigilasse, cum autem bella moverentur externa, accidisse plerumque luctuosa, icto post haec foedere gentium ritu perfectaque sollemnitate imperator Mediolanum ad hiberna discessit.\r\n\r\nUt enim benefici liberalesque sumus, non ut exigamus gratiam (neque enim beneficium faeneramur sed natura propensi ad liberalitatem sumus), sic amicitiam non spe mercedis adducti sed quod omnis eius fructus in ipso amore inest, expetendam putamus.', 'article1.jsp', '2016-03-01', 'francais'),
-(2, 'Et inplorans legum accusatorem veterem', 'article2.jpg', 'Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus, ne exspectemus quidem, dum rogemur; studium semper adsit, cunctatio absit; consilium vero dare audeamus libere. Plurimum in amicitia amicorum bene suadentium valeat auctoritas, eaque et adhibeatur ad monendum non modo aperte sed etiam acriter, si res postulabit, et adhibitae pareatur.', 'Quaestione igitur per multiplices dilatata fortunas cum ambigerentur quaedam, non nulla levius actitata constaret, post multorum clades Apollinares ambo pater et filius in exilium acti cum ad locum Crateras nomine pervenissent, villam scilicet suam quae ab Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur.\r\n\r\nSiquis enim militarium vel honoratorum aut nobilis inter suos rumore tenus esset insimulatus fovisse partes hostiles, iniecto onere catenarum in modum beluae trahebatur et inimico urgente vel nullo, quasi sufficiente hoc solo, quod nominatus esset aut delatus aut postulatus, capite vel multatione bonorum aut insulari solitudine damnabatur.\r\n\r\nEt quoniam apud eos ut in capite mundi morborum acerbitates celsius dominantur, ad quos vel sedandos omnis professio medendi torpescit, excogitatum est adminiculum sospitale nequi amicum perferentem similia videat, additumque est cautionibus paucis remedium aliud satis validum, ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes.\r\n\r\nPrimi igitur omnium statuuntur Epigonus et Eusebius ob nominum gentilitatem oppressi. praediximus enim Montium sub ipso vivendi termino his vocabulis appellatos fabricarum culpasse tribunos ut adminicula futurae molitioni pollicitos.\r\n\r\nDum haec in oriente aguntur, Arelate hiemem agens Constantius post theatralis ludos atque circenses ambitioso editos apparatu diem sextum idus Octobres, qui imperii eius annum tricensimum terminabat, insolentiae pondera gravius librans, siquid dubium deferebatur aut falsum, pro liquido accipiens et conperto, inter alia excarnificatum Gerontium Magnentianae comitem partis exulari maerore multavit.', 'article2.jpg', '2016-03-02', 'francais');
+INSERT INTO `article` (`id_Article`, `titre_Article`, `photoPresentation_Article`, `textePresentation_Article`, `photo_Article`, `texte_Article`, `date_Article`, `categorie_Article`, `langue_Article`) VALUES
+(1, 'Aperta ut provincias in parceretur', '10 Construction 2.jpg', 'Quo cognito Constantius ultra mortalem modum exarsit ac nequo casu idem Gallus de futuris incertus agitare quaedam conducentia saluti suae per itinera conaretur, remoti sunt omnes de industria milites agentes in civitatibus perviis.', '11 Présentation.jpg', 'Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.\r\n\r\nEt licet quocumque oculos flexeris feminas adfatim multas spectare cirratas, quibus, si nupsissent, per aetatem ter iam nixus poterat suppetere liberorum, ad usque taedium pedibus pavimenta tergentes iactari volucriter gyris, dum exprimunt innumera simulacra, quae finxere fabulae theatrales.\r\n\r\nEt interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur.', '2016-02-09', 'Coucou', 'fr');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie`
+--
+
+CREATE TABLE IF NOT EXISTS `categorie` (
+  `id_Categorie` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Categorie` varchar(150) NOT NULL,
+  `langue_Categorie` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Categorie`),
+  KEY `id_Categorie` (`id_Categorie`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `categorie`
+--
+
+INSERT INTO `categorie` (`id_Categorie`, `nom_Categorie`, `langue_Categorie`) VALUES
+(1, 'Coucou', 'fr'),
+(5, 'Loulou', 'fr'),
+(4, 'Porte', 'fr'),
+(2, 'Salut', 'fr'),
+(3, 'Toto', 'fr');
 
 -- --------------------------------------------------------
 
@@ -69,21 +101,51 @@ INSERT INTO `article` (`idArticle`, `titreArticle`, `photoPresentation`, `texteP
 --
 
 CREATE TABLE IF NOT EXISTS `evenement` (
-  `idEvenement` int(11) NOT NULL AUTO_INCREMENT,
-  `nomEvenement` varchar(150) NOT NULL,
-  `descritpionEvenement` text NOT NULL,
-  `dateEvenement` date NOT NULL,
-  `photoEvenement` varchar(150) NOT NULL,
-  PRIMARY KEY (`nomEvenement`),
-  KEY `idEvenement` (`idEvenement`)
+  `id_Evenement` int(11) NOT NULL AUTO_INCREMENT,
+  `article_Evenement` varchar(150) NOT NULL,
+  `nom_Evenement` varchar(150) NOT NULL,
+  `description_Evenement` text NOT NULL,
+  `date_Evenement` date NOT NULL,
+  `photo_Evenement` varchar(150) NOT NULL,
+  `langue_Evenement` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Evenement`),
+  KEY `id_Evenement` (`id_Evenement`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `evenement`
 --
 
-INSERT INTO `evenement` (`idEvenement`, `nomEvenement`, `descritpionEvenement`, `dateEvenement`, `photoEvenement`) VALUES
-(1, 'Cervices libertatis velut cervices fundamenta', 'Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.\r\n\r\nArdeo, mihi credite, Patres conscripti (id quod vosmet de me existimatis et facitis ipsi) incredibili quodam amore patriae, qui me amor et subvenire olim impendentibus periculis maximis cum dimicatione capitis, et rursum, cum omnia tela undique esse intenta in patriam viderem, subire coegit atque excipere unum pro universis. Hic me meus in rem publicam animus pristinus ac perennis cum C. Caesare reducit, reconciliat, restituit in gratiam.\r\n\r\nVictus universis caro ferina est lactisque abundans copia qua sustentantur, et herbae multiplices et siquae alites capi per aucupium possint, et plerosque mos vidimus frumenti usum et vini penitus ignorantes.\r\n\r\nEt prima post Osdroenam quam, ut dictum est, ab hac descriptione discrevimus, Commagena, nunc Euphratensis, clementer adsurgit, Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.\r\n\r\nIdeoque fertur neminem aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt. et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte.', '2016-03-01', '20 Vue.jpg');
+INSERT INTO `evenement` (`id_Evenement`, `article_Evenement`, `nom_Evenement`, `description_Evenement`, `date_Evenement`, `photo_Evenement`, `langue_Evenement`) VALUES
+(1, 'Aperta ut provincias in parceretur', 'C''est la fete', 'Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.', '2016-03-02', '12 Test sur circuit.jpg', 'fr');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `galerie`
+--
+
+CREATE TABLE IF NOT EXISTS `galerie` (
+  `id_Galerie` int(11) NOT NULL AUTO_INCREMENT,
+  `article_Galerie` varchar(150) NOT NULL,
+  `titre_Galerie` varchar(150) NOT NULL,
+  `description_Galerie` text NOT NULL,
+  `date_Galerie` date NOT NULL,
+  `lien_Galerie` varchar(150) NOT NULL,
+  `categorie_Galerie` varchar(150) NOT NULL,
+  `type_Galerie` varchar(150) NOT NULL,
+  `langue_Galerie` varchar(150) NOT NULL,
+  PRIMARY KEY (`titre_Galerie`),
+  KEY `id_Galerie` (`id_Galerie`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `galerie`
+--
+
+INSERT INTO `galerie` (`id_Galerie`, `article_Galerie`, `titre_Galerie`, `description_Galerie`, `date_Galerie`, `lien_Galerie`, `categorie_Galerie`, `type_Galerie`, `langue_Galerie`) VALUES
+(3, 'Aperta ut provincias in parceretur', 'Test 1', 'Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.', '2007-03-07', '14 Solar Event.JPG', 'Coucou', 'photo', 'fr'),
+(4, 'Aperta ut provincias in parceretur', 'Test 2', 'Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.', '2016-03-21', '15 Solar Event 2.JPG', 'Toto', 'video', 'fr');
 
 -- --------------------------------------------------------
 
@@ -92,28 +154,28 @@ INSERT INTO `evenement` (`idEvenement`, `nomEvenement`, `descritpionEvenement`, 
 --
 
 CREATE TABLE IF NOT EXISTS `membre` (
-  `idMembre` int(11) NOT NULL AUTO_INCREMENT,
-  `nomMembre` varchar(100) NOT NULL,
-  `prenomMembre` varchar(100) NOT NULL,
-  `jobMembre` varchar(100) NOT NULL,
-  `photoMembre` varchar(150) NOT NULL,
-  `descriptionMembre` text NOT NULL,
-  `facebookMembre` varchar(150) NOT NULL,
-  `linkMembre` varchar(150) NOT NULL,
-  `twitterMembre` varchar(150) NOT NULL,
-  `instaMembre` varchar(150) NOT NULL,
-  `mailMembre` varchar(150) NOT NULL,
-  `langueMembre` varchar(150) NOT NULL,
-  PRIMARY KEY (`nomMembre`,`prenomMembre`,`idMembre`),
-  KEY `idMembre` (`idMembre`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `id_Membre` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Membre` varchar(150) NOT NULL,
+  `prenom_Membre` varchar(150) NOT NULL,
+  `job_Membre` varchar(150) NOT NULL,
+  `photo_Membre` varchar(150) NOT NULL,
+  `description_Membre` text NOT NULL,
+  `facebook_Membre` varchar(150) NOT NULL,
+  `link_Membre` varchar(150) NOT NULL,
+  `twitter_Membre` varchar(150) NOT NULL,
+  `insta_Membre` varchar(150) NOT NULL,
+  `mail_Membre` varchar(150) NOT NULL,
+  `langue_Membre` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Membre`,`prenom_Membre`,`id_Membre`),
+  KEY `id_Membre` (`id_Membre`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `membre`
 --
 
-INSERT INTO `membre` (`idMembre`, `nomMembre`, `prenomMembre`, `jobMembre`, `photoMembre`, `descriptionMembre`, `facebookMembre`, `linkMembre`, `twitterMembre`, `instaMembre`, `mailMembre`, `langueMembre`) VALUES
-(1, 'Toto', 'Sisi', 'Patron', '8 Maquette.jpg', 'Et quoniam apud eos ut in capite mundi morborum acerbitates celsius dominantur, ad quos vel sedandos omnis professio medendi torpescit, excogitatum est adminiculum sospitale nequi amicum perferentem similia videat, additumque est cautionibus paucis remedium aliud satis validum, ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes.', 'https://www.facebook.com/simon.destriez?fref=ts', 'https://www.linkedin.com/in/simon-destriez-52755a111', 'https://twitter.com/MisterVonline', 'a la salope', 'simon.destriez@hei.fr', 'francais');
+INSERT INTO `membre` (`id_Membre`, `nom_Membre`, `prenom_Membre`, `job_Membre`, `photo_Membre`, `description_Membre`, `facebook_Membre`, `link_Membre`, `twitter_Membre`, `insta_Membre`, `mail_Membre`, `langue_Membre`) VALUES
+(1, 'Destriez', 'Simon', 'Président', '', '  Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.', 'https://www.facebook.com/simon.destriez?fref=ts', 'https://fr.linkedin.com/in/simondestriez', 'https://twitter.com/SimonDestriez', 'https://www.instagram.com/simondestriez/', 'simon.destriez@hei.fr', 'fr');
 
 -- --------------------------------------------------------
 
@@ -122,31 +184,23 @@ INSERT INTO `membre` (`idMembre`, `nomMembre`, `prenomMembre`, `jobMembre`, `pho
 --
 
 CREATE TABLE IF NOT EXISTS `partenaire` (
-  `idPartenaire` int(11) NOT NULL AUTO_INCREMENT,
-  `nomPartenaire` varchar(150) NOT NULL,
-  `descritpionPartenaire` text NOT NULL,
-  `languePartenaire` varchar(150) NOT NULL,
-  `importancePartenaire` int(11) NOT NULL,
-  PRIMARY KEY (`nomPartenaire`),
-  KEY `idPartenaire` (`idPartenaire`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+  `id_Partenaire` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Partenaire` varchar(150) NOT NULL,
+  `description_Partenaire` text NOT NULL,
+  `photo_Partenaire` varchar(150) NOT NULL,
+  `lien_Partenaire` varchar(150) NOT NULL,
+  `importance_Partenaire` int(11) NOT NULL,
+  `langue_Partenaire` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Partenaire`),
+  KEY `id_Partenaire` (`id_Partenaire`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Structure de la table `photo`
+-- Contenu de la table `partenaire`
 --
 
-CREATE TABLE IF NOT EXISTS `photo` (
-  `idPhoto` int(11) NOT NULL AUTO_INCREMENT,
-  `titrePhoto` varchar(150) NOT NULL,
-  `commentairePhoto` text NOT NULL,
-  `datePhoto` date NOT NULL,
-  `descriptionPhoto` text NOT NULL,
-  `languePhoto` varchar(150) NOT NULL,
-  PRIMARY KEY (`titrePhoto`),
-  KEY `idPhoto` (`idPhoto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+INSERT INTO `partenaire` (`id_Partenaire`, `nom_Partenaire`, `description_Partenaire`, `photo_Partenaire`, `lien_Partenaire`, `importance_Partenaire`, `langue_Partenaire`) VALUES
+(1, 'Kahina', 'Etenim si attendere diligenter, existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse, cui, utrum vellet, liceret, nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur. Sed ego Atratino, humanissimo atque optimo adulescenti meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis. Si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae. Ceteris non modo nihil ignoscendum, sed etiam acriter est resistendum.', 'tektronix.jpg', 'http://uk.tek.com/', 10, 'fr');
 
 -- --------------------------------------------------------
 
@@ -155,12 +209,13 @@ CREATE TABLE IF NOT EXISTS `photo` (
 --
 
 CREATE TABLE IF NOT EXISTS `piece` (
-  `idPiece` int(11) NOT NULL AUTO_INCREMENT,
-  `nomPiece` varchar(150) NOT NULL,
-  `descritpionPiece` text NOT NULL,
-  `languePiece` varchar(150) NOT NULL,
-  PRIMARY KEY (`nomPiece`),
-  KEY `idPiece` (`idPiece`)
+  `id_Piece` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Piece` varchar(150) NOT NULL,
+  `voiture_Piece` varchar(150) NOT NULL,
+  `description_Piece` text NOT NULL,
+  `langue_Piece` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Piece`),
+  KEY `id_Piece` (`id_Piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -170,41 +225,14 @@ CREATE TABLE IF NOT EXISTS `piece` (
 --
 
 CREATE TABLE IF NOT EXISTS `voiture` (
-  `idVoiture` int(11) NOT NULL AUTO_INCREMENT,
-  `nomVoiture` varchar(150) NOT NULL,
-  `descriptionVoiture` text NOT NULL,
-  `langueVoiture` varchar(150) NOT NULL,
-  PRIMARY KEY (`nomVoiture`),
-  KEY `idVoiture` (`idVoiture`)
+  `id_Voiture` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_Voiture` varchar(150) NOT NULL,
+  `photo_Voiture` varchar(150) NOT NULL,
+  `description_Voiture` text NOT NULL,
+  `langue_Voiture` varchar(150) NOT NULL,
+  PRIMARY KEY (`nom_Voiture`),
+  KEY `id_Voiture` (`id_Voiture`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Contraintes pour les tables exportées
---
-
---
--- Contraintes pour la table `admin`
---
-ALTER TABLE `admin`
-  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`nomAdmin`) REFERENCES `membre` (`nomMembre`);
-
---
--- Contraintes pour la table `evenement`
---
-ALTER TABLE `evenement`
-  ADD CONSTRAINT `evenement_ibfk_1` FOREIGN KEY (`nomEvenement`) REFERENCES `article` (`titreArticle`);
-
---
--- Contraintes pour la table `photo`
---
-ALTER TABLE `photo`
-  ADD CONSTRAINT `photo_ibfk_1` FOREIGN KEY (`titrePhoto`) REFERENCES `article` (`titreArticle`);
-
---
--- Contraintes pour la table `piece`
---
-ALTER TABLE `piece`
-  ADD CONSTRAINT `piece_ibfk_1` FOREIGN KEY (`nomPiece`) REFERENCES `voiture` (`nomVoiture`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

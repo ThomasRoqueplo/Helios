@@ -7,8 +7,8 @@ var getEvenement = function(int){
 	requeteGetEvenement.onload = function(){
 		var a = this.response.length;
 		for(var i=int; i<int+5; i++){
-			var lienPage = "article/"+this.response[i].articleEvenement;
-			var lienImg = "img/"+this.response[i].photoEvenement;
+			var lienPage = "article/"+this.response[i].article_Evenement;
+			var lienImg = "img/"+this.response[i].photo_Evenement;
 			
 			var divEvenement = document.createElement('div');
 			
@@ -35,9 +35,9 @@ var getEvenement = function(int){
 			img1Evenement.setAttribute("alt", "");
 			
 			div2Evenement.setAttribute("class", "col-md-5");
-			h3Evenement.textContent = this.response[i].nomEvenement;
-			h4Evenement.textContent = this.response[i].dateEvenement;
-			pEvenement.textContent = this.response[i].descriptionEvenement;
+			h3Evenement.textContent = this.response[i].nom_Evenement;
+			h4Evenement.textContent = this.response[i].date_Evenement;
+			pEvenement.textContent = this.response[i].description_Evenement;
 			a2Evenement.setAttribute("class", "btn btn-primary");
 			a2Evenement.setAttribute("href", lienPage);
 			iEvenement.textContent = "Voir plus";

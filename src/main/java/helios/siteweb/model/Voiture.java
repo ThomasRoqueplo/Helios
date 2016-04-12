@@ -2,40 +2,62 @@ package helios.siteweb.model;
 
 public class Voiture {
 	
-	String nomVoiture;
-	String descriptionVoiture;
-	String langueVoiture;
+	private Integer id_Voiture;
+	private String nom_Voiture;
+	private String photo_Voiture;
+	private String description_Voiture;
+	private String langue_Voiture;
 	
-	public Voiture(String nomVoiture, String descriptionVoiture,
-			String langueVoiture){
-		this.nomVoiture = nomVoiture;
-		this.descriptionVoiture = descriptionVoiture;
-		this.langueVoiture = langueVoiture;
+	public Voiture(Integer id_Voiture,
+			String nom_Voiture, 
+			String photo_Voiture,
+			String description_Voiture,
+			String langue_Voiture){
+		this.id_Voiture = id_Voiture;
+		this.nom_Voiture = nom_Voiture;
+		this.photo_Voiture = photo_Voiture;
+		this.description_Voiture = description_Voiture;
+		this.langue_Voiture = langue_Voiture;
 	}
 
-	public String getNomVoiture() {
-		return nomVoiture;
+	public Integer getId_Voiture() {
+		return id_Voiture;
 	}
 
-	public void setNomVoiture(String nomVoiture) {
-		this.nomVoiture = nomVoiture;
+	public void setId_Voiture(Integer id_Voiture) {
+		this.id_Voiture = id_Voiture;
 	}
 
-	public String getDescriptionVoiture() {
-		return descriptionVoiture;
+	public String getNom_Voiture() {
+		return nom_Voiture;
 	}
 
-	public void setDescriptionVoiture(String descriptionVoiture) {
-		this.descriptionVoiture = descriptionVoiture;
+	public void setNom_Voiture(String nom_Voiture) {
+		this.nom_Voiture = nom_Voiture;
 	}
 
-	public String getLangueVoiture() {
-		return langueVoiture;
+	public String getPhoto_Voiture() {
+		return photo_Voiture;
 	}
 
-	public void setLangueVoiture(String langueVoiture) {
-		this.langueVoiture = langueVoiture;
+	public void setPhoto_Voiture(String photo_Voiture) {
+		this.photo_Voiture = photo_Voiture;
 	}
-	
+
+	public String getDescription_Voiture() {
+		return description_Voiture;
+	}
+
+	public void setDescription_Voiture(String description_Voiture) {
+		this.description_Voiture = description_Voiture;
+	}
+
+	public String getLangue_Voiture() {
+		return langue_Voiture;
+	}
+
+	public void setLangue_Voiture(String langue_Voiture) {
+		this.langue_Voiture = langue_Voiture;
+	}
 	
 }

@@ -8,8 +8,8 @@ var getPhoto = function(){
 	requeteGetPhoto.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<nbPhoto; i++){
-			var lienPhoto = "article/"+this.response[i].articlePhoto;
-			var lienImg = "img/"+this.response[i].lienPhoto;
+			var lienPhoto = "article/"+this.response[i].article_Galerie;
+			var lienImg = "img/"+this.response[i].lien_Galerie;
 			
 			var div1Photo = document.createElement('div');			
 			div1Photo.setAttribute("class", "col-md-3 col-sm-6 galerieInf");
@@ -30,7 +30,7 @@ var getPhoto = function(){
 			var div4Photo = document.createElement('div');
 			div4Photo.setAttribute("class", "panel-body");
 			var h4Photo = document.createElement('h4');
-			h4Photo.textContent = this.response[i].titrePhoto;
+			h4Photo.textContent = this.response[i].titre_Galerie;
 			var a4Photo = document.createElement('a');
 			a4Photo.setAttribute("href", lienPhoto);
 			a4Photo.setAttribute("class", "btn btn-primary");
@@ -62,8 +62,8 @@ var getVideo = function(){
 	requeteGetPhoto.onload = function(){
 		var a = this.response.length;
 		for(var i=0; i<nbVideo; i++){
-			var lienPhoto = "article/"+this.response[i].articlePhoto;
-			var lienImg = "img/"+this.response[i].lienPhoto;
+			var lienPhoto = "article/"+this.response[i].article_Galerie;
+			var lienImg = "img/"+this.response[i].lien_Galerie;
 			
 			var div1Photo = document.createElement('div');			
 			div1Photo.setAttribute("class", "col-md-3 col-sm-6 galerieInf");
@@ -84,7 +84,7 @@ var getVideo = function(){
 			var div4Photo = document.createElement('div');
 			div4Photo.setAttribute("class", "panel-body");
 			var h4Photo = document.createElement('h4');
-			h4Photo.textContent = this.response[i].titrePhoto;
+			h4Photo.textContent = this.response[i].titre_Galerie;
 			var a4Photo = document.createElement('a');
 			a4Photo.setAttribute("href", lienPhoto);
 			a4Photo.setAttribute("class", "btn btn-primary");

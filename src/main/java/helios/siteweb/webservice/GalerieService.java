@@ -9,11 +9,11 @@ import javax.ws.rs.core.Response;
 import com.google.gson.Gson;
 
 import helios.siteweb.metier.HeliosManager;
-import helios.siteweb.model.Photo;
+import helios.siteweb.model.Galerie;
 
 @Path("/galerie")
 public class GalerieService {
-	private List<Photo> liste;
+	private List<Galerie> liste;
 	private Gson gson = new Gson();
 	
 	@Path("/photo")

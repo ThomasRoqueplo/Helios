@@ -7,8 +7,8 @@ var getPartenaire = function(int){
 	requeteGetPartenaire.onload = function(){
 		var a = this.response.length;
 		for(var i=int; i<int+5; i++){
-			var lienPartenaire = this.response[i].lienPartenaire;
-			var lienImg = "img/"+this.response[i].photoPartenaire;
+			var lienPartenaire = this.response[i].lien_Partenaire;
+			var lienImg = "img/"+this.response[i].photo_Partenaire;
 			
 			var divPartenaire = document.createElement('div');
 			
@@ -32,8 +32,8 @@ var getPartenaire = function(int){
 			img1Partenaire.setAttribute("alt", "");
 			
 			div2Partenaire.setAttribute("class", "col-md-5");
-			h3Partenaire.textContent = this.response[i].nomPartenaire;
-			pPartenaire.textContent = this.response[i].descriptionPartenaire;
+			h3Partenaire.textContent = this.response[i].nom_Partenaire;
+			pPartenaire.textContent = this.response[i].description_Partenaire;
 			
 			a1Partenaire.appendChild(img1Partenaire);
 			div1Partenaire.appendChild(a1Partenaire);
