@@ -48,10 +48,6 @@
 				<h1 class="page-header">
 					Liste de nos partenaires <small></small>
 				</h1>
-				<ol class="breadcrumb">
-					<li><a href="index">Accueil</a></li>
-					<li class="active">Partenaires</li>
-				</ol>
 			</div>
 		</div>
 

@@ -87,6 +87,15 @@
 
 
 		</div>
+		
+		<ul class="pager" id="passagePage">
+            <li class="previous" id="recent">
+                <a href="#">&larr; Articles plus récents</a>
+            </li>
+            <li class="next" id="ancien">
+                <a href="#">Articles plus anciens &rarr;</a>
+            </li>
+        </ul>
 
 
 		<!-- /.row -->
