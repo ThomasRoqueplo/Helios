@@ -219,23 +219,77 @@ window.onload = function() {
 getArticle(nb);
 getCategorie();
 
-document.getElementById("recent").onclick=function(){
-if(nb != 0){
-nb = nb - 5;
-if(document.getElementsByClassName("blog1").length != 0){
-remove("blog1");
-}
-getArticle(nb);
-}
+document.getElementById("page0").onclick=function(){
+	document.getElementById("page"+nb).setAttribute("class", "");
+	nb = 0;
+	document.getElementById("page0").setAttribute("class", "active");
+	if(document.getElementsByClassName("blog1").length != 0){
+		remove("blog1");
+	}
+	getArticle(nb);
 };
 
-document.getElementById("ancien").onclick=function(){
-if(nb != 20){
-nb = nb + 5;
-if(document.getElementsByClassName("blog1").length != 0){
-remove("blog1");
-}
-getArticle(nb);
-}
+document.getElementById("page5").onclick=function(){
+	document.getElementById("page"+nb).setAttribute("class", "");
+	nb = 5;
+	document.getElementById("page5").setAttribute("class", "active");
+	if(document.getElementsByClassName("blog1").length != 0){
+		remove("blog1");
+	}
+	getArticle(nb);
+};
+
+document.getElementById("page10").onclick=function(){
+	document.getElementById("page"+nb).setAttribute("class", "");
+	nb = 10;
+	document.getElementById("page10").setAttribute("class", "active");
+	if(document.getElementsByClassName("blog1").length != 0){
+		remove("blog1");
+	}
+	getArticle(nb);
+};
+
+document.getElementById("page15").onclick=function(){
+	document.getElementById("page"+nb).setAttribute("class", "");
+	nb = 15;
+	document.getElementById("page15").setAttribute("class", "active");
+	if(document.getElementsByClassName("blog1").length != 0){
+		remove("blog1");
+	}
+	getArticle(nb);
+};
+
+document.getElementById("page20").onclick=function(){
+	document.getElementById("page"+nb).setAttribute("class", "");
+	nb = 20;
+	document.getElementById("page20").setAttribute("class", "active");
+	if(document.getElementsByClassName("blog1").length != 0){
+		remove("blog1");
+	}
+	getArticle(nb);
+};
+
+document.getElementById("avant").onclick=function(){
+	if(nb != 0){
+		document.getElementById("page"+nb).setAttribute("class", "");
+		nb = nb - 5;
+		document.getElementById("page"+nb).setAttribute("class", "active");
+		if(document.getElementsByClassName("blog1").length != 0){
+			remove("blog1");
+		}
+		getArticle(nb);
+	}
+};
+
+document.getElementById("apres").onclick=function(){
+	if(nb != 20){
+		document.getElementById("page"+nb).setAttribute("class", "");
+		nb = nb + 5;
+		document.getElementById("page"+nb).setAttribute("class", "active");
+		if(document.getElementsByClassName("blog1").length != 0){
+			remove("blog1");
+		}
+		getArticle(nb);
+	}
 };
 }

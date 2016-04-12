@@ -47,11 +47,6 @@
                 <h1 class="page-header">Blog
                     <small></small>
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="index">Accueil</a>
-                    </li>
-                    <li class="active">Blog</li>
-                </ol>
             </div>
         </div>
         <!-- /.row -->
@@ -62,14 +57,19 @@
             <div class="col-md-8" id="articleBlog">
 
                 <!-- Pager -->
-                <ul class="pager" id="passagePage">
-                    <li class="previous" id="recent">
-                        <a href="#">&larr; Articles plus récents</a>
-                    </li>
-                    <li class="next" id="ancien">
-                        <a href="#">Articles plus anciens &rarr;</a>
-                    </li>
-                </ul>
+                <div class="row text-center" id="passagePage">
+			<div class="col-lg-12">
+				<ul class="pagination">
+					<li><a href="#" id="avant">&laquo;</a></li>
+					<li class="active" id="page0"><a href="#">1</a></li>
+					<li id="page5"><a href="#">2</a></li>
+					<li id="page10"><a href="#">3</a></li>
+					<li id="page15"><a href="#">4</a></li>
+					<li id="page20"><a href="#">5</a></li>
+					<li id="apres"><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+		</div>
 
             </div>
 

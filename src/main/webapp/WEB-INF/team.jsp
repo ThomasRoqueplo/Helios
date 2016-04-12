@@ -46,10 +46,6 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">A propos de l'équipe</h1>
-				<ol class="breadcrumb">
-					<li><a href="index">Acceuil</a></li>
-					<li class="active">Team</li>
-				</ol>
 			</div>
 		</div>
 		<!-- /.row -->

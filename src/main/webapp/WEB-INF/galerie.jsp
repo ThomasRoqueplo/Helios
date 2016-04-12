@@ -23,6 +23,8 @@
 <!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
+	
+<link href="css/lightbox.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,10 +50,6 @@
 				<h1 class="page-header">
 					Galerie <small></small>
 				</h1>
-				<ol class="breadcrumb">
-					<li><a href="index">Accueil</a></li>
-					<li class="active">Galerie</li>
-				</ol>
 			</div>
 		</div>
 
@@ -96,6 +94,7 @@
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/galerieJS.js"></script>
+	<script src="js/lightbox.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>

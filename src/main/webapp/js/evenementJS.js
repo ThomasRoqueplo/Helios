@@ -66,6 +66,7 @@ var getEvenement = function(int){
 
 function remove(string){
 	var obj = document.getElementById("containerEvenement");
+	var liste = document.getElementsByClassName(string);
 	var longueur = liste.length;
 	
 	for(var j = 0; j<longueur; j++){

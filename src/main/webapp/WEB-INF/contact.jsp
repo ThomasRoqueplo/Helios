@@ -49,10 +49,6 @@
 				<h1 class="page-header">
 					Contact <small></small>
 				</h1>
-				<ol class="breadcrumb">
-					<li><a href="index.jsp">Acceuil</a></li>
-					<li class="active">Contact</li>
-				</ol>
 			</div>
 		</div>
 		<!-- /.row -->
