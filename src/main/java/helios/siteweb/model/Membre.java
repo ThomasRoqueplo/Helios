@@ -7,7 +7,7 @@ public class Membre {
 	private String prenom_Membre;
 	private String job_Membre;
 	private String photo_Membre;
-	private String descpriton_Membre;
+	private String description_Membre;
 	private String facebook_Membre;
 	private String link_Membre;
 	private String twitter_Membre;
@@ -19,7 +19,7 @@ public class Membre {
 			String prenom_Membre, 
 			String job_Membre,
 			String photo_Membre, 
-			String descpriton_Membre, 
+			String description_Membre, 
 			String facebook_Membre, 
 			String link_Membre,
 			String twitter_Membre, 
@@ -31,7 +31,7 @@ public class Membre {
 		this.prenom_Membre = prenom_Membre;
 		this.job_Membre = job_Membre;
 		this.photo_Membre = photo_Membre;
-		this.descpriton_Membre = descpriton_Membre;
+		this.description_Membre = description_Membre;
 		this.facebook_Membre = facebook_Membre;
 		this.link_Membre = link_Membre;
 		this.twitter_Membre = twitter_Membre;
@@ -44,7 +44,7 @@ public class Membre {
 			String prenom_Membre, 
 			String job_Membre, 
 			String photo_Membre, 
-			String descpriton_Membre, 
+			String description_Membre, 
 			String facebook_Membre, 
 			String link_Membre,
 			String twitter_Membre, 
@@ -54,13 +54,14 @@ public class Membre {
 		this.prenom_Membre = prenom_Membre;
 		this.job_Membre = job_Membre;
 		this.photo_Membre = photo_Membre;
-		this.descpriton_Membre = descpriton_Membre;
+		this.description_Membre = description_Membre;
 		this.facebook_Membre = facebook_Membre;
 		this.link_Membre = link_Membre;
 		this.twitter_Membre = twitter_Membre;
 		this.insta_Membre = insta_Membre;
 		this.mail_Membre = mail_Membre;
 	}
+
 
 	public Integer getId_Membre() {
 		return id_Membre;
@@ -102,12 +103,12 @@ public class Membre {
 		this.photo_Membre = photo_Membre;
 	}
 
-	public String getDescpriton_Membre() {
-		return descpriton_Membre;
+	public String getdescription_Membre() {
+		return description_Membre;
 	}
 
-	public void setDescpriton_Membre(String descpriton_Membre) {
-		this.descpriton_Membre = descpriton_Membre;
+	public void setdescription_Membre(String description_Membre) {
+		this.description_Membre = description_Membre;
 	}
 
 	public String getFacebook_Membre() {
