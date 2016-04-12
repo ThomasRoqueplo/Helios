@@ -87,7 +87,7 @@ public class MembreDaoImpl implements MembreDao {
 			stmt2.setString(2, nouveauMembre.getPrenom_Membre());
 			stmt2.setString(3, nouveauMembre.getJob_Membre());
 			stmt2.setString(4, nouveauMembre.getPhoto_Membre());
-			stmt2.setString(5, nouveauMembre.getDescpriton_Membre());
+			stmt2.setString(5, nouveauMembre.getdescription_Membre());
 			stmt2.setString(6, nouveauMembre.getFacebook_Membre());
 			stmt2.setString(7, nouveauMembre.getLink_Membre());
 			stmt2.setString(8, nouveauMembre.getTwitter_Membre());
@@ -114,7 +114,7 @@ public class MembreDaoImpl implements MembreDao {
 			stmt.setString(2, membre.getPrenom_Membre());
 			stmt.setString(3, membre.getJob_Membre());
 			stmt.setString(4, membre.getPhoto_Membre());
-			stmt.setString(5, membre.getDescpriton_Membre());
+			stmt.setString(5, membre.getdescription_Membre());
 			stmt.setString(6, membre.getFacebook_Membre());
 			stmt.setString(7, membre.getLink_Membre());
 			stmt.setString(8, membre.getTwitter_Membre());
