@@ -2,16 +2,19 @@ package helios.siteweb.metier;
 
 import java.util.List;
 
+import helios.siteweb.dao.AdminDao;
 import helios.siteweb.dao.ArticleDao;
 import helios.siteweb.dao.EvenementDao;
 import helios.siteweb.dao.GalerieDao;
 import helios.siteweb.dao.MembreDao;
 import helios.siteweb.dao.PartenaireDao;
+import helios.siteweb.dao.impl.AdminDaoImpl;
 import helios.siteweb.dao.impl.ArticleDaoImpl;
 import helios.siteweb.dao.impl.EvenementDaoImpl;
 import helios.siteweb.dao.impl.GalerieDaoImpl;
 import helios.siteweb.dao.impl.MembreDaoImpl;
 import helios.siteweb.dao.impl.PartenaireDaoImpl;
+import helios.siteweb.model.Admin;
 import helios.siteweb.model.Article;
 import helios.siteweb.model.Evenement;
 import helios.siteweb.model.Membre;
@@ -34,6 +37,7 @@ public class HeliosManager {
 	private MembreDao membreDao = new MembreDaoImpl();
 	private PartenaireDao partenaireDao = new PartenaireDaoImpl();
 	private GalerieDao galerieDao = new GalerieDaoImpl();
+	private AdminDao adminDao = new AdminDaoImpl();
 	
 	private HeliosManager(){
 		
@@ -93,5 +97,32 @@ public class HeliosManager {
 		Article article = articleDao.getArticle(id);
 		return article;		
 	}
+	
+	public Membre getMembre(Integer id) {
+		Membre membre = membreDao.getMembre(id);
+		return membre;
+	}
 
+	public void ModifierMembre(Membre nouveauMembre) {
+		if (nouveauMembre == null) {
+			throw new IllegalArgumentException("Le membre à modifier ne peut pas être null.");
+		}
+		else
+			membreDao.ModifierMembre(nouveauMembre);
+
+	}
+
+	public void ajouterMembre(Membre nouveauMembre) {
+		membreDao.ajouterMembre(nouveauMembre);
+	}
+
+
+	public void supprimerMembre(Integer id_Membre) {
+		membreDao.supprimerMembre(id_Membre);		
+	}
+
+	public List<helios.siteweb.model.Admin> getAdmin() {
+		List<Admin> listeAdmin = adminDao.getAdmin();
+		return listeAdmin;
+	}
 }

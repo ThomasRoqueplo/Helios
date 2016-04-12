@@ -15,7 +15,7 @@ public class Membre {
 	private String mail_Membre;
 	private String langue_Membre;
 	
-	public Membre(String nom_Membre, 
+	public Membre(Integer id_Membre, String nom_Membre, 
 			String prenom_Membre, 
 			String job_Membre,
 			String photo_Membre, 
@@ -26,6 +26,7 @@ public class Membre {
 			String insta_Membre,
 			String mail_Membre, 
 			String langue_Membre){
+		this.id_Membre = id_Membre;
 		this.nom_Membre = nom_Membre;
 		this.prenom_Membre = prenom_Membre;
 		this.job_Membre = job_Membre;
